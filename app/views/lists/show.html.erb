@@ -1,0 +1,31 @@
+<div class="banniere">
+<%= @list.name %>
+</div>
+
+
+
+<div class="container w-100 mb-5">
+<%= link_to "Add a movie", new_list_bookmark_url(params[:id]), class: "btn btn-primary mt-4" %>
+<div class="d-flex row g-3">
+
+<% @list.movies.each do |movie| %>
+<div class="mt-5 col-4">
+  <div class="carteMovie rounded">
+    <img src=<%= movie.poster_url %> alt="">
+  <div class="titre-description">
+      <div><strong><%= movie.title %></strong></div>
+      <div><%= movie.overview %></div>
+    </div>
+<div class="moviecomment">
+<div><%= Bookmark.find_by(list_id: @list.id, movie_id: movie.id).comment %></div>
+<%= link_to "Remove movie from list",
+    bookmark_path(Bookmark.find_by list_id: @list.id, movie_id: movie.id),
+    data: {turbo_method: :delete }
+  %>
+</div>
+  </div>
+</div>
+
+<% end %>
+</div>
+</div>

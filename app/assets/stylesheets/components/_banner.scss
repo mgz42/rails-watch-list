@@ -1,0 +1,19 @@
+.banniere {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("theater.jpg");
+  background-size: cover;
+  background-position-y: center;
+  width: 100%;
+  color: #ffffff;
+  font-size: 3rem;
+  position: relative;
+
+  .bouton-new-list{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
+}

@@ -11,6 +11,18 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end border-bottom">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav pe-5">
+    <%= link_to "All list", lists_path, class: "nav-item nav-link active" %>
+    <%= link_to "New list", new_list_path, class: "nav-item nav-link" %>
+    </div>
+  </div>
+</nav>
+
     <%= yield %>
   </body>
 </html>
