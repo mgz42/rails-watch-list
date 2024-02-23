@@ -1,10 +1,12 @@
 .carte {
   height: 200px;
-  background-color: grey;
+  background-position: top;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 1.3rem;
   padding: 1rem;
+
 }

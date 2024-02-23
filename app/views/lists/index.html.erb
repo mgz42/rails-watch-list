@@ -1,4 +1,4 @@
-<div class="banniere">
+<div class="banniere" style="background-image: url('https://res.cloudinary.com/djhznac9v/image/upload/v1708701208/banner_smwhlm.jpg')">
 Save any kind of movies
 <%= link_to "Create a list", new_list_path, class: "bouton-new-list btn btn-primary"%>
 </div>
@@ -6,9 +6,9 @@ Save any kind of movies
 <div class="d-flex row g-3">
 
 <% @lists.each do |list| %>
-<div class="mt-5 col-4"><div class="carte rounded"><%= link_to list.name, list_path(list.id), class: "carte rounded text-decoration-none"%>
+<div class="mt-5 col-4"><div class="carte rounded" style="background-image: url(<%= cl_image_path list.photo.key, height: 300, crop: :fill %>)">
+  <%= link_to list.name, list_path(list.id), class: "text-decoration-none text-light"%>
 </div></div>
 <% end %>
-
 </div>
 </div>
